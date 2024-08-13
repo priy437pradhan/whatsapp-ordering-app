@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.mainLogo {
+  height: 70px;
+  width: auto;
+ 
+  object-fit: cover;
+}
+.card-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .card-detail-container {
+    transition: height 0.3s ease;
+    margin-bottom: 0;
+  }
+  
+  .card-detail-container.h-expanded {
+    height: auto;
+  }
+  
+  .card-detail-image {
+    height: 168px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card-detail-image.hi-expanded {
+    height: 70vh !important;
+  }
+  
+
+  
+  .btn-mt-2 {
+    margin-top: -10px !important;
+  }
+  
+  .gradient-bottom-to-top {
+    background: linear-gradient(to top, black, transparent, transparent);
+  }
+  
+  @media (min-width: 1024px) {
+    .c-responsive-image-sc {
+      height: 400px;
+      width: 50%;
+    }
+    .responsive-image-sc {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .mainLogo {
+      height: 50px;
+      width: auto;
+     
+      object-fit: cover;
+  }
+
+  }
+ 
+  .BorderedSqrCard{
+    border-radius: 10px;
+    border:2px solid #d1cccc;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 5px;
+  }
+  .BorderedSqrCard img{
+    border-radius: 5px;
+  }
+ .boxShadow{
+  box-shadow:0 2px 13px 3px rgba(0, 0, 0, 0.3);
+ }
+
+ .category-container {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.category-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.category-image {
+  object-fit: cover;
+}
+
+.category-title {
+  background: rgba(255, 255, 255, 0.75);
+}
